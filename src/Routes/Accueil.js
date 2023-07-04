@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'react-bootstrap/Image';
-import './style.css';
+import './accueil.css';
 
 export default function Accueil() {
   return (
@@ -8,8 +8,8 @@ export default function Accueil() {
     <div className="fullscreen-bg">
       <Image className="charles" src="/charles-cantin-brazil.jpg" fluid />
       <div className="centered-text">
-        <h1 className='gradient-text'>Charles Cantin</h1>
-        <h1 className='gradient-text'>Photographe</h1>
+        <h1 className='title-splash'>Charles Cantin</h1>
+        <h1 className='title-splash'>Photographe</h1>
       </div>
     </div>
     </>

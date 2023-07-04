@@ -15,6 +15,7 @@ function App() {
           height="70"
           className="d-inline-block align-top charles-logo"
           alt="React Bootstrap logo"
+          href="/accueil"
       />
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" className="media-collapse" data-bs-theme="dark" />
@@ -26,18 +27,23 @@ function App() {
             <Nav.Link href="/contact">Contact</Nav.Link>
           </Nav>
           <div className="social-position">
-        <img
+            <a href='https://fr-fr.facebook.com/'>
+            <img
           src="Facebook_logo.png"
           height="45"
           className="d-inline-block align-top fb-logo"
           alt="React Bootstrap logo"
       />
-       <img
+            </a>
+        <a href='https://www.instagram.com'>
+        <img
           src="Instagram_logo.webp"
           height="45"
           className="d-inline-block align-top insta-logo"
           alt="React Bootstrap logo"
       />
+        </a>
+
         </div>
         </Navbar.Collapse>
 

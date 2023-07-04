@@ -1,0 +1,54 @@
+body {
+    background-color: #1E1E1E;
+}
+
+.form-position {
+font-family: 'Inter', sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #EEE;
+font-size: 18px;
+}
+
+.title-page {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    color: #EEE;
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+
+.para-container{
+ display: flex;
+ justify-self: center;
+}
+
+input, textarea {
+    display: flex;
+    justify-content: flex-end;
+}
+
+textarea {
+    min-width: 350px;
+    min-height: 200px;
+}
+
+@media only screen and (min-width: 768px) {
+    input {
+        display: flex;
+        justify-content: flex-end;
+        min-width: 400px;
+        min-height: 40px;
+    }
+    textarea {
+        display: flex;
+        justify-content: flex-end;
+        min-width: 550px;
+        min-height: 200px;
+    }
+}
+
