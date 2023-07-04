@@ -6,6 +6,27 @@
     height: 100vh;
     z-index: -1;
   }
+
+  .centered-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: "Archivo Black", sans-serif;
+    color: #EEE;
+  }
+
+  h1 {
+    font-size: 80px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+
   
   .charles {
     width: 100%;
@@ -14,3 +35,5 @@
     position: fixed;
     object-position: bottom;
   }
+
+  

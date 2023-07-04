@@ -28,13 +28,13 @@ function App() {
           <div className="social-position">
         <img
           src="Facebook_logo.png"
-          height="50"
+          height="45"
           className="d-inline-block align-top fb-logo"
           alt="React Bootstrap logo"
       />
        <img
           src="Instagram_logo.webp"
-          height="50"
+          height="45"
           className="d-inline-block align-top insta-logo"
           alt="React Bootstrap logo"
       />
