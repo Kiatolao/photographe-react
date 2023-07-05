@@ -7,7 +7,8 @@ import Footer from './Footer.js'
 export default function Portfolio() {
   const [items, setItems] = useState(Menu);
   const [active, setActive] = useState(false);
-  
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const filterItem = (categItem) => {
     const updateItems = Menu.filter((curElem) => {
       return curElem.category === categItem;
@@ -16,69 +17,79 @@ export default function Portfolio() {
     setItems(updateItems);
     setActive(true);
   };
+
+  const openPopup = (image) => {
+    setSelectedImage(image);
+  };
+
+  const closePopup = () => {
+    setSelectedImage(null);
+  };
   
   return (
     <>
-        <h1 className='title-page'>PORTFOLIO</h1>
-    <hr></hr>
+      <h1 className='title-page'>PORTFOLIO</h1>
+      <hr />
       <div className="container">
-        <div className="d-flex justify-content-center">
-          <Button variant="outline-light" className={active === "Bébé" ? "active" : ""} onClick={() => filterItem("Bébé")}>
-            Bébé
-          </Button>
-          <Button variant="outline-light" className={active === "Mariage" ? "active" : ""} onClick={() => filterItem("Mariage")}>
-            Mariage
-          </Button>
-          <Button variant="outline-light" className={active === "Grossesse" ? "active" : ""} onClick={() => filterItem("Grossesse")}>
-            Grossesse
-          </Button>
-          <Button variant="outline-light" className={active === "Baptême" ? "active" : ""} onClick={() => filterItem("Baptême")}>
-            Baptême
-          </Button>
-          <Button variant="outline-light" className={active === "Couple" ? "active" : ""} onClick={() => filterItem("Couple")}>
-            Couple
-          </Button>
-          <Button variant="outline-light" className={active === "Famille" ? "active" : ""} onClick={() => filterItem("Famille")}>
-            Famille
-          </Button>
-          <Button variant="outline-light" className={active === "All" ? "active" : ""} onClick={() => setItems(Menu)}>
-            All
-          </Button>
-        </div>
-      </div>
+  <div className="d-flex flex-wrap justify-content-center button-style">
+    <Button variant="outline-light" className={active === "Bébé" ? "active" : ""} onClick={() => filterItem("Bébé")} style={{margin: "5px"}}>
+      Bébé
+    </Button>
+    <Button variant="outline-light" className={active === "Mariage" ? "active" : ""} onClick={() => filterItem("Mariage")} style={{margin: "5px"}}>
+      Mariage
+    </Button>
+    <Button variant="outline-light" className={active === "Grossesse" ? "active" : ""} onClick={() => filterItem("Grossesse")} style={{margin: "5px"}}>
+      Grossesse
+    </Button>
+    <Button variant="outline-light" className={active === "Baptême" ? "active" : ""} onClick={() => filterItem("Baptême")} style={{margin: "5px"}}>
+      Baptême
+    </Button>
+    <Button variant="outline-light" className={active === "Couple" ? "active" : ""} onClick={() => filterItem("Couple")} style={{margin: "5px"}}>
+      Couple
+    </Button>
+    <Button variant="outline-light" className={active === "Famille" ? "active" : ""} onClick={() => filterItem("Famille")} style={{margin: "5px"}}>
+      Famille
+    </Button>
+    <Button variant="outline-light" className={active === "All" ? "active" : ""} onClick={() => setItems(Menu)} style={{margin: "5px"}}>
+      Toutes
+    </Button>
+  </div>
+</div>
 
-      <div className="container-fluid mt-4">
-        <Row>
-          {items.map((elem) => {
-            const { id, image } = elem;
-
-            return (
-              <Col sm={4} className="d-flex justify-content-center align-items-center" key={id}>
-                <div className="custom-image-container">
-                  <div className="custom-image" style={{ backgroundImage: `url(${image})` }}></div>
-                </div>
-              </Col>
-            );
-          })}
-        </Row>
-      </div>
-
-      <div className="container-fluid mt-4">
+      <div className="container-fluid mt-4 ">
         <Row>
           {items.map((elem) => {
             const { id, name, image } = elem;
 
             return (
               <Col sm={4} className="d-flex justify-content-center align-items-center" key={id}>
-                <div style={{ margin: '20px' }}>
-                  <Image src={image} alt={name} fluid style={{ marginRight: '20px' }} className="custom-image" />
+                <div style={{ marginBottom: '15px' }}>
+                  <Image
+                    src={image}
+                    alt={name}
+                    fluid
+                    className="image-container"
+                    onClick={() => openPopup(image)}
+                  />
                 </div>
               </Col>
             );
           })}
         </Row>
       </div>
-      <Footer/>
+
+      {selectedImage && (
+        <div className="popup">
+          <div className="popup-content">
+            <Image src={selectedImage} alt="Popup" fluid  className="pop-container"/>
+            <button className="close-button" onClick={closePopup}>
+               X 
+            </button>
+          </div>
+        </div>
+      )}
+
+      <Footer />
     </>
-  )
+  );
 }

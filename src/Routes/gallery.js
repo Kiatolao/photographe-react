@@ -2,7 +2,7 @@ const Menu = [
     {
       id: 1,
       image: "baby-hat.jpg",
-      alt: "Maggi",
+      name: "Maggi",
       category: "Bébé",
     },
     {
@@ -21,7 +21,7 @@ const Menu = [
     },
     {
       id: 4,
-      image: "femme.jpg",
+      image: "bapteme.jpg",
       name: "Maggi",
       category: "Baptême",
    
