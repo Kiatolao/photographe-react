@@ -1,5 +1,5 @@
 import React from 'react'
-import './contact.css'
+import '../index.css'
 import Footer from './Footer.js'
 
 
