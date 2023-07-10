@@ -1,24 +1,31 @@
 
 import '../index.css';
-import Image from 'react-bootstrap/Image';
+import React, { useEffect, useState } from "react";
+
+
 export default function Accueil() {
 
+  const [img, setImg] = useState();
 
-fetch("https://reqres.in/api/users?page=2")
-  .then(function (response) {
-    return response.json();
-  })
- .then(function (data) {  
-    console.log(data);
-  })
+  const fetchImage = async () => {
+    const res = await fetch('https://api.storyblok.com/v2/cdn/stories/image?version=draft&token=cyEGQa57ApxhswSDgNkQHQtt&cv=1688920710');
+    const data = await res.json();
+    const imageUrl = data.story.content.image;
+    
+    setImg(imageUrl);
+  };
   
-  .catch(error => console.log('error', error));
+  useEffect(() => {
+    fetchImage();
+  }, []);
+  
 
-  
   return (
     <>
       <div className="fullscreen-bg">
-      <Image className="charles" src="/charles-cantin-brazil.jpg" fluid />
+
+    {img && <img src={img} alt="wallpaper accueil" className='charles'/>}
+
       <div className="centered-text">
         <h1 className='title-splash'>Charles Cantin</h1>
         <h1 className='title-splash'>Photographe</h1>
