@@ -1,30 +1,34 @@
-
+import React from "react";
 import '../index.css';
-import React, { useEffect, useState } from "react";
-
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 export default function Accueil() {
 
-  const [img, setImg] = useState();
-
-  const fetchImage = async () => {
-    const res = await fetch('https://api.storyblok.com/v2/cdn/stories/image?version=draft&token=cyEGQa57ApxhswSDgNkQHQtt&cv=1688920710');
-    const data = await res.json();
-    const imageUrl = data.story.content.image;
-    
-    setImg(imageUrl);
-  };
+    const [imageData, setImageData] = useState(null);
   
-  useEffect(() => {
-    fetchImage();
-  }, []);
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get('http://localhost:8055/items/background');
+          const { data } = response.data;
+          setImageData(data);
+        } catch (error) {
+          console.error('Error:', error.message);
+        }
+      };
   
+      fetchData();
+    }, []);
 
   return (
     <>
       <div className="fullscreen-bg">
 
-    {img && <img src={img} alt="wallpaper accueil" className='charles'/>}
+      {imageData && (
+        <img src={`http://localhost:8055/assets/${imageData.image}`} alt={imageData.title} className="charles" />
+      )}
+
 
       <div className="centered-text">
         <h1 className='title-splash'>Charles Cantin</h1>
