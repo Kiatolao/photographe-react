@@ -13,7 +13,8 @@ export default function Accueil() {
           const response = await axios.get('http://localhost:8055/items/background');
           const { data } = response.data;
           setImageData(data);
-        } catch (error) {
+        } 
+        catch (error) {
           console.error('Error:', error.message);
         }
       };

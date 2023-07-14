@@ -11,6 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* header */
+@media only screen and (min-width: 991px)  {
+ .navbar-color {
+  height: 60px;
+ }
+ .charles-logo {
+  height: 50px;
+ }
+ .nav-link {
+  font-size: 24px;
+ }
+}
 
 /* acceuil */
 .fullscreen-bg {
@@ -37,7 +49,7 @@ code {
 }
 
 .title-splash {
-  font-size: 80px;
+  font-size: 70px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
