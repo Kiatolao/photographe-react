@@ -88,7 +88,7 @@ export default function Tarifs() {
         <Card style={{ width: '18rem' }} className='card-style'>
           <Card.Img variant="top" src="mariage.jpg" className='card-image'  />
           <Card.Body>
-            <Card.Title className='card-title'>J'immortalise l'événement</Card.Title>
+            <Card.Title className='card-title'>J immortalise l événement</Card.Title>
             <Card.Text className='card-text'>
             Prestation de mariage ou baptême sur devis<br></br>
             <span className='card-price'>
