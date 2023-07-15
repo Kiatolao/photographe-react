@@ -25,7 +25,7 @@ code {
   font-family: 'Inter', sans-serif;
   font-size: 28px;
   font-weight:100;
-  
+ 
 }
 
 .social-logo {
@@ -38,7 +38,6 @@ code {
 .social-icons-container {
   display: flex;
   align-items: center;
-
   margin-left: auto;
 }
 
@@ -52,6 +51,7 @@ code {
   .typo {
     font-size: 18px;
     font-weight: 400;
+
   }
   .social-logo{
     margin-top: 10px;
@@ -80,6 +80,10 @@ code {
  .social-logo {
   height: 30px;
   margin-right: 15px;
+ }
+ .typo {
+  position: absolute;
+  left: 36.5%;
  }
 }
 
