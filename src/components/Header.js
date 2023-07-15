@@ -3,18 +3,39 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import '../index.css';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+
 
 export default function Header() {
+  const [logoData, setImageData] = useState(null);
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:8055/items/logo');
+        const { data } = response.data;
+        setImageData(data);
+      } 
+      catch (error) {
+        console.error('Error:', error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <Navbar collapseOnSelect expand="lg" className="navbar-color">
     <Container className="">
       <Link to="/accueil">
-        <img
-          src="CCminit.png"
+        {logoData &&  (   <img
+          src= {`http://localhost:8055/assets/${logoData.image}`}
           height="70"
           className="d-inline-block align-top charles-logo"
           alt="React Bootstrap logo"
-        />
+        />)}
+     
       </Link>
 
       <Navbar.Toggle aria-controls="responsive-navbar-nav" className="media-collapse" data-bs-theme="dark" />

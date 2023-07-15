@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1E1E1E !important;
+  height: 100vh;
 }
 
 code {
@@ -20,7 +22,10 @@ code {
   height: 50px;
  }
  .nav-link {
-  font-size: 24px;
+  font-size: 20px !important;
+ }
+ .fb-logo, .insta-logo {
+  height: 30px;
  }
 }
 
@@ -69,10 +74,7 @@ code {
 }
 
 /* contact */
-body {
-  background-color: #1E1E1E;
-  height: 100vh;
-}
+
 
 .form-position {
 font-family: 'Inter', sans-serif;
@@ -86,27 +88,27 @@ font-weight: 600;
 
 .text-contact {
   color: #EEE;
-  font-size: 18px;
+  font-size: 16px;
   margin: 30px;
   text-align: justify;
 }
 
 .title-page {
   font-family: "Archivo Black", sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 600;
   color: #EEE;
   display: flex;
   justify-content: center;
-  margin: 40px;
+  margin: 25px;
   text-align: center;
 }
 
 hr {
-  color: #EEE;
+  color: #EEE !important;
   width: 50%;
-  margin: auto;
-  margin-bottom: 30px;
+  margin: auto !important;
+  margin-bottom: 30px !important;
 }
 
 input{
