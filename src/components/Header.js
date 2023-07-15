@@ -4,38 +4,23 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import '../index.css';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import useFetch from '../components/useFetch';
 
 
 export default function Header() {
-  const [logoData, setImageData] = useState(null);
-  
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:8055/items/logo');
-        const { data } = response.data;
-        setImageData(data);
-      } 
-      catch (error) {
-        console.error('Error:', error.message);
-      }
-    };
-
-    fetchData();
-  }, []);
+    const { fetchData: logoData} = useFetch('http://localhost:8055/items/logo');
+    const { fetchData: socialData} = useFetch('http://localhost:8055/items/social');
   return (
+    <>
     <Navbar collapseOnSelect expand="lg" className="navbar-color">
     <Container className="">
       <Link to="/accueil">
         {logoData &&  (   <img
           src= {`http://localhost:8055/assets/${logoData.image}`}
-          height="70"
+
           className="d-inline-block align-top charles-logo"
-          alt="React Bootstrap logo"
-        />)}
-     
+          alt={logoData.title}
+        />)} 
       </Link>
 
       <Navbar.Toggle aria-controls="responsive-navbar-nav" className="media-collapse" data-bs-theme="dark" />
@@ -46,26 +31,21 @@ export default function Header() {
           <Link to="/tarifs" className="nav-link">Tarifs</Link>
           <Link to="/contact" className="nav-link">Contact</Link>
         </Nav>
-        <div className="social-position">
-          <a href='https://fr-fr.facebook.com/'>
+        {socialData && socialData.map((social) => (
+        <div className="social-position" key={social.id}>
+          <a href={social.url}>
             <img
-              src="Facebook_logo.png"
-              height="45"
-              className="d-inline-block align-top fb-logo"
-              alt="React Bootstrap logo"
-            />
-          </a>
-          <a href='https://www.instagram.com'>
-            <img
-              src="Instagram_logo.webp"
-              height="45"
-              className="d-inline-block align-top insta-logo"
-              alt="React Bootstrap logo"
+              src={`http://localhost:8055/assets/${social.logo}`}
+              className="d-inline-block align-top social-logo"
+              alt={social.title}
             />
           </a>
         </div>
+        ))}
       </Navbar.Collapse>
     </Container>
   </Navbar>
+    </>
+
   )
-}
+}   

@@ -47,10 +47,10 @@ code {
     font-size: 18px;
     font-weight: 400;
   }
-  .fb-logo, .insta-logo {
+  .social-logo{
     margin-top: 10px;
     margin-right: 15px;
-    height: 35px;
+    height: 30px;
   }
 
   .charles-logo {
@@ -71,8 +71,9 @@ code {
  .nav-link {
   font-size: 20px !important;
  }
- .fb-logo, .insta-logo {
+ .social-logo {
   height: 30px;
+  margin-right: 15px;
  }
 }
 
