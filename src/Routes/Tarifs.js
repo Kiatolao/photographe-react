@@ -1,107 +1,59 @@
-import React from 'react'
-import Footer from './Footer.js'
+import React from 'react';
+import Footer from '../components/Footer.js';
 import { Card, Row, Col } from 'react-bootstrap';
-import './tarifs.css'
+import '../index.css';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 export default function Tarifs() {
+  const [cardData, setCardData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:8055/items/tarif');
+        const { data } = response.data;
+        setCardData(data);
+        setIsLoading(false);
+      } catch (error) {
+        console.error('Error:', error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <>
-    <h1 className='title-page'>TARIFS ET PRESTATIONS</h1>
-    <hr></hr>
-    <div className="card-position">
-    <Row >
-      <Col sm={4}>
-        <Card style={{ width: '18rem' }} className='card-style'>
-          <Card.Img variant="top" src="baby-hat.jpg" className='card-image' />
-          <Card.Body>
-            <Card.Title className='card-title'>Mon bébé</Card.Title>
-            <Card.Text className='card-text'>
-              Photo d’enfant jusqu’à 3 ans (photo à domicile) <br></br>
-              <span className='card-price'>
-          <strong>100€</strong>
-        </span>
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </Col>
-      <Col sm={4}>
-        <Card style={{ width: '18rem' }} className='card-style'>
-          <Card.Img variant="top" src="femme.jpg" className='card-image' />
-          <Card.Body>
-            <Card.Title className='card-title'>Juste moi</Card.Title>
-            <Card.Text className='card-text'>
-              Séance pour une personne, en extérieur ou en studio <br></br>
-              <span className='card-price'>
-          <strong>130€</strong>
-        </span>
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </Col>
-      <Col sm={4}>
-        <Card style={{ width: '18rem' }} className='card-style'>
-          <Card.Img variant="top" src="couple.jpg" className='card-image'  />
-          <Card.Body>
-            <Card.Title className='card-title'>Pour deux</Card.Title>
-            <Card.Text className='card-text'>
-            Pour deux personnes, en extérieur ou en studio<br></br>
-            <span className='card-price'>
-          <strong>195€</strong>
-        </span>
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </Col>
-    </Row>
-    </div>
-    <div className="card-position">
-    <Row >
-      <Col sm={4}>
-        <Card style={{ width: '18rem' }} className='card-style'>
-          <Card.Img variant="top" src="family.jpg" className='card-image'  />
-          <Card.Body>
-            <Card.Title className='card-title'>Famille</Card.Title>
-            <Card.Text className='card-text'>
-            Pour la famille ou les amis jusqu’à 4 personnes, en extérieur ou ... <br></br>
-            <span className='card-price'>
-          <strong>220€</strong>
-        </span>
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </Col>
-      <Col sm={4}>
-        <Card style={{ width: '18rem' }} className='card-style'>
-          <Card.Img variant="top" src="enceinte.jpg" className='card-image'  />
-          <Card.Body>
-            <Card.Title className='card-title'>Il était une fois</Card.Title>
-            <Card.Text className='card-text'>
-            Photo de grossesse (À votre domicile, en extérieur ou en studio)<br></br>
-            <span className='card-price'>
-          <strong>160€</strong>
-        </span>
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </Col>
-      <Col sm={4}>
-        <Card style={{ width: '18rem' }} className='card-style'>
-          <Card.Img variant="top" src="mariage.jpg" className='card-image'  />
-          <Card.Body>
-            <Card.Title className='card-title'>J immortalise l événement</Card.Title>
-            <Card.Text className='card-text'>
-            Prestation de mariage ou baptême sur devis<br></br>
-            <span className='card-price'>
-          <strong>Prix sur mesure</strong>
-        </span>
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </Col>
-    </Row>
-    </div>
+      <h1 className="title-page">TARIFS ET PRESTATIONS</h1>
+      <hr />
+      <div className="container">
+        {isLoading ? (
+          <p>Loading...</p>
+        ) : (
+          <Row>
+            {cardData.map((card) => (
+              <Col key={card.id} sm={12} md={6} lg={4}>
+                <Card className="card-style">
+                  <Card.Img
+                    src={`http://localhost:8055/assets/${card.image}`}
+                    alt={card.title}
+                    className="card-image"
+                  />
+                  <Card.Body>
+                    <Card.Title>{card.title}</Card.Title>
+                    <Card.Text>{card.description}</Card.Text>
+                    <Card.Text className='card-price'>{card.prix}</Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        )}
+      </div>
 
-        <Footer />
+      <Footer />
     </>
-  )
+  );
 }

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Menu from "./gallery.js";
 import { Col, Row, Image, Button } from 'react-bootstrap';
-import './portfolio.css'
-import Footer from './Footer.js'
+import '../index.css';
+import Footer from '../components/Footer.js'
 
 export default function Portfolio() {
   const [items, setItems] = useState(Menu);

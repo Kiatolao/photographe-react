@@ -24,6 +24,8 @@ export default function Accueil() {
       fetchData();
     }, []);
 
+
+
   return (
     <>
       <div className="fullscreen-bg">

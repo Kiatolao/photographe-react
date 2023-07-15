@@ -1,5 +1,4 @@
 body {
-
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -13,6 +12,56 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* app */
+.navbar-color {
+  background-color: rgba(71, 85, 94, 0.7);
+}
+
+.navbar-color .nav-link {
+  color: #eeeeee;
+}
+
+.typo {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight:100;
+  
+}
+
+.fb-logo, .insta-logo {
+  margin-right: 23px;
+}
+
+.social-position {
+ right: 150px;
+}
+
+.media-collapse {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+@media only screen and (max-width: 991px)  {
+  .typo {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .fb-logo, .insta-logo {
+    margin-top: 10px;
+    margin-right: 15px;
+    height: 35px;
+  }
+
+  .charles-logo {
+    height: 50px;
+    margin-bottom: 5px;
+  }
+
+}
+
+
+
 /* header */
 @media only screen and (min-width: 991px)  {
  .navbar-color {
@@ -73,8 +122,118 @@ code {
     }
 }
 
-/* contact */
+/* portfolio */
+.image-container {
+  margin: auto;
+}
 
+.button-style {
+  font-size: 20px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8); 
+  z-index: 9999; 
+}
+
+.popup-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  background-color: #fff; 
+}
+
+.close-button {
+  font-family:'Inter', sans-serif;
+  font-weight: 600;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 0px;
+  font-size: 30px;
+  color: #000000; 
+  background-color: rgb(255, 255, 255);
+  opacity: 80%;
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 991px)  {
+  .close-button {
+      font-size: 20px;
+    }
+  
+    .popup-content {
+      margin: 10px;
+    }
+
+}
+
+@media (orientation: landscape) and (max-width: 991px) {
+  .close-button {
+      font-size: 20px;
+      }
+      
+  .popup-content {
+      width: auto;
+      height: 95%;
+      }
+  .pop-container {
+      height: 100%;
+      }
+}
+
+/* tarifs */
+.card-position {
+  display: flex;
+  justify-content: center;
+}
+
+.card-style {
+  margin: auto;
+  margin-bottom: 30px;
+  width: 18rem;
+}
+
+.card-image {
+  height: 200px;
+  width: auto;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+.card-price {
+  font-weight: 700;
+
+}
+
+strong {
+  font-size: 20px;
+}
+
+
+
+.card-title {
+  display: flex;
+  justify-content: center;
+}
+
+/* contact */
 
 .form-position {
 font-family: 'Inter', sans-serif;
@@ -180,4 +339,20 @@ textarea {
 
 .button-87:active {
   transform: scale(0.95);
+}
+
+/* footer */
+.footer {
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1E1E1E;
+  text-align: center;
+  padding: 20px;
+}
+
+.text-footer {
+    color: #EEE;
+
 }
