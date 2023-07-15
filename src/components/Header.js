@@ -31,6 +31,7 @@ export default function Header() {
           <Link to="/tarifs" className="nav-link">Tarifs</Link>
           <Link to="/contact" className="nav-link">Contact</Link>
         </Nav>
+        <div className="social-icons-container">
         {socialData && socialData.map((social) => (
         <div className="social-position" key={social.id}>
           <a href={social.url}>
@@ -42,6 +43,7 @@ export default function Header() {
           </a>
         </div>
         ))}
+        </div>
       </Navbar.Collapse>
     </Container>
   </Navbar>

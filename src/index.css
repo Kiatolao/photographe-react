@@ -28,12 +28,18 @@ code {
   
 }
 
-.fb-logo, .insta-logo {
+.social-logo {
   margin-right: 23px;
 }
 
 .social-position {
  right: 150px;
+}
+.social-icons-container {
+  display: flex;
+  align-items: center;
+
+  margin-left: auto;
 }
 
 .media-collapse {
