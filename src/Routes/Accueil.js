@@ -1,29 +1,10 @@
 import React from "react";
 import '../index.css';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import useFetch from '../components/useFetch';
 
 export default function Accueil() {
 
-    const [imageData, setImageData] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-  
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const response = await axios.get('http://localhost:8055/items/background');
-          const { data } = response.data;
-          setImageData(data);
-          setIsLoading(false);
-        } 
-        catch (error) {
-          console.error('Error:', error.message);
-        }
-      };
-  
-      fetchData();
-    }, []);
-
+  const { fetchData, isLoading } = useFetch('http://localhost:8055/items/background');
 
 
   return (
@@ -33,8 +14,8 @@ export default function Accueil() {
       {isLoading ? (
         <p>Chargement...</p>
       ) : (
-        imageData && (
-          <img src={`http://localhost:8055/assets/${imageData.image}`} alt={imageData.title} className="charles" />
+        fetchData && (
+          <img src={`http://localhost:8055/assets/${fetchData.image}`} alt={fetchData.title} className="charles" />
         )
       )}
 

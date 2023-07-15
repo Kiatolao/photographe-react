@@ -2,27 +2,11 @@ import React from 'react';
 import Footer from '../components/Footer.js';
 import { Card, Row, Col } from 'react-bootstrap';
 import '../index.css';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import useFetch from '../components/useFetch';
 
 export default function Tarifs() {
-  const [cardData, setCardData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:8055/items/tarif');
-        const { data } = response.data;
-        setCardData(data);
-        setIsLoading(false);
-      } catch (error) {
-        console.error('Error:', error.message);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const { fetchData, isLoading } = useFetch('http://localhost:8055/items/tarif');
 
   return (
     <>
@@ -30,10 +14,10 @@ export default function Tarifs() {
       <hr />
       <div className="container">
         {isLoading ? (
-          <p>Loading...</p>
+          <p>Chargement...</p>
         ) : (
           <Row>
-            {cardData.map((card) => (
+            {fetchData.map((card) => (
               <Col key={card.id} sm={12} md={6} lg={4}>
                 <Card className="card-style">
                   <Card.Img

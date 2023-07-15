@@ -60,8 +60,6 @@ code {
 
 }
 
-
-
 /* header */
 @media only screen and (min-width: 991px)  {
  .navbar-color {
@@ -234,7 +232,6 @@ strong {
 }
 
 /* contact */
-
 .form-position {
 font-family: 'Inter', sans-serif;
 display: flex;
