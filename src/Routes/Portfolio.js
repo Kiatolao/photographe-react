@@ -55,9 +55,10 @@ export default function Portfolio() {
   className="my-masonry-grid pt-4"
   columnClassName="my-masonry-grid_column"
 >
+{/* //à voir, ne peut pas filtrer si le tag ne commence pas par une majuscule - erreur avec toLowerCase() */}
   {galleryData &&
     galleryData
-      .filter((gallery) => selectedFilter === '' || gallery.tag == selectedFilter)
+      .filter((gallery) => selectedFilter === '' || gallery.tag == selectedFilter) 
       .map((gallery) => (
         <div key={gallery.id} className="my-masonry-grid_item">
           <Image
