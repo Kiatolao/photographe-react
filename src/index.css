@@ -66,6 +66,35 @@ code {
 
 }
 
+/* layer */
+.layer1 {
+  position: absolute;
+  opacity: 0.2;
+  max-width: 150px!important;
+  top: 75px;
+  right: 0px;
+  z-index: -2;
+}
+
+.layer2 {
+  position: absolute;
+  opacity: 0.2;
+  max-width: 150px!important;
+  top: 75px;
+  left: 0px;
+  z-index: -2;
+}
+
+@media only screen and (min-width: 991px)  {
+  .layer1{
+    right: 65px;
+    top: 50px;
+  }
+  .layer2{
+    left: 65px;
+    top: 50px;
+  }
+}
 /* header */
 @media only screen and (min-width: 991px)  {
  .navbar-color {
@@ -140,7 +169,6 @@ code {
   display: flex;
   width: auto;
   margin-right: 15px;
-
 }
 
 .separator {
@@ -157,6 +185,13 @@ code {
   margin-bottom: 15px; 
 }
 
+.full-height-modal {
+  width: 100% !important;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* tarifs */
 .card-position {
@@ -168,6 +203,7 @@ code {
   margin: auto;
   margin-bottom: 30px;
   width: 18rem;
+
 }
 
 .card-image {

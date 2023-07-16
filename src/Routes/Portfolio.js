@@ -5,9 +5,7 @@ import Footer from '../components/Footer.js'
 import useFetch from '../components/useFetch';
 import Masonry from 'react-masonry-css';
 
-
 export default function Portfolio() {
-  
   const [selectedFilter, setSelectedFilter] = useState(''); 
   const { fetchData: buttonData, isLoading } = useFetch('http://localhost:8055/items/bouton');
   const { fetchData: galleryData } = useFetch('http://localhost:8055/items/gallerie');
