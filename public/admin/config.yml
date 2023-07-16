@@ -21,7 +21,7 @@ collections:
 
   - name: "fond_accueil" 
     label: "Fond_accueil"
-    folder: "_background"
+    folder: "_posts/background"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
