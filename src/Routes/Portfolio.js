@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import { Row, Col, Image, Button } from 'react-bootstrap';
+import {Image, Button } from 'react-bootstrap';
 import '../index.css';
 import Footer from '../components/Footer.js'
 import useFetch from '../components/useFetch';
+import Masonry from 'react-masonry-css';
+
 
 export default function Portfolio() {
+  
   const [selectedFilter, setSelectedFilter] = useState(''); 
   const { fetchData: buttonData, isLoading } = useFetch('http://localhost:8055/items/bouton');
   const { fetchData: galleryData } = useFetch('http://localhost:8055/items/gallerie');
-  console.log(galleryData);
 
   return (
     <>
@@ -37,28 +39,39 @@ export default function Portfolio() {
               Toutes
             </Button>
           </div>
-        </div>
-      )}
 
-      <div className="container-fluid mt-4">
-        <Row>
-          {galleryData &&
-            galleryData
-            .filter((gallery) => selectedFilter === '' || gallery.tag == selectedFilter) 
-              .map((gallery) => (
-                <Col sm={4} className="d-flex justify-content-center align-items-center" key={gallery.id}>
-                  <div style={{ marginBottom: '15px' }}>
-                    <Image
-                      src={`http://localhost:8055/assets/${gallery.image}`}
-                      alt={gallery.title}
-                      fluid
-                      className={`image-container ${gallery.tag}`}
-                    />
-                  </div>
-                </Col>
-              ))}
-        </Row>
+        </div>
+        
+      )}
+      <div className="separator">
+        <hr />
       </div>
+
+<Masonry
+  breakpointCols={{
+    default: 3,
+    1200: 2,
+    992: 2,
+    768: 1
+  }}
+  className="my-masonry-grid pt-4"
+  columnClassName="my-masonry-grid_column"
+>
+  {galleryData &&
+    galleryData
+      .filter((gallery) => selectedFilter === '' || gallery.tag == selectedFilter)
+      .map((gallery) => (
+        <div key={gallery.id} className="my-masonry-grid_item">
+          <Image
+            src={`http://localhost:8055/assets/${gallery.image}`}
+            alt={gallery.title}
+            fluid
+            className={`image-container ${gallery.tag}`}
+          />
+        </div>
+      ))}
+</Masonry>
+
       <Footer />
     </>
   );

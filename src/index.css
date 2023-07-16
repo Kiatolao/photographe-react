@@ -132,12 +132,29 @@ code {
 }
 
 /* portfolio */
-.image-container {
-  margin: auto;
-}
 
 .button-style {
   font-size: 20px;
+}
+.my-masonry-grid {
+  display: flex;
+  width: auto;
+  margin-right: 15px;
+
+}
+
+.separator {
+  margin-top: 30px;
+}
+
+.my-masonry-grid_column {
+  padding-left: 15px; 
+  background-clip: padding-box;
+
+}
+
+.my-masonry-grid_item {
+  margin-bottom: 15px; 
 }
 
 
@@ -254,7 +271,7 @@ textarea {
       margin-top: 30px;
   }
 }
-
+/* contact button */
 .button-87 {
   margin: 10px;
   padding: 15px 30px;
@@ -301,3 +318,4 @@ textarea {
     color: #EEE;
 
 }
+
