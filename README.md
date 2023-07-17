@@ -36,4 +36,13 @@
 
 << Charte Graphique >>
     --Palette de couleur --
-![Railway env](https://charles-cantin.s3.eu-west-3.amazonaws.com/image/palette.png)    
+
+![Railway env](https://charles-cantin.s3.eu-west-3.amazonaws.com/image/palette.png)   
+
+    --Police d'écriture--
+
+![Railway env](https://charles-cantin.s3.eu-west-3.amazonaws.com/image/police.png)   
+
+    --Wireframe/Mockup--
+
+![Railway env](https://charles-cantin.s3.eu-west-3.amazonaws.com/image/figma.png)   
