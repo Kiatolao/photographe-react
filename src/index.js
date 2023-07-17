@@ -6,39 +6,36 @@ import Portfolio from './Routes/Portfolio';
 import Accueil from './Routes/Accueil';
 import Tarifs from './Routes/Tarifs';
 import Contact from './Routes/Contact';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
-    path : "/",
-    element : <App/>,
-    children :[
+    path: '/',
+    element: <App />,
+    children: [
       {
-        path : "portfolio",
-        element :<Portfolio/>
+        path: 'accueil', 
+        element: <Accueil />,
       },
       {
-        path : "accueil",
-        element :<Accueil/>
+        path: 'portfolio',
+        element: <Portfolio />,
       },
       {
-        path : "tarifs",
-        element :<Tarifs/>
+        path: 'tarifs',
+        element: <Tarifs />,
       },
       {
-        path : "contact",
-        element :<Contact/>
+        path: 'contact',
+        element: <Contact />,
       },
-
-    ]
-  }
-  ])
-
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+     <RouterProvider router={router} />
   </React.StrictMode>
 );
-
