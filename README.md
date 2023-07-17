@@ -15,6 +15,6 @@
         - L'environnement va automatiquement créer un repo sur GitHub: 
             https://github.com/Kiatolao/cms-directus
 
-![Railway env](https://charles-cantin.s3.eu-west-3.amazonaws.com/image/railway.png =250px)
+![Railway env](https://charles-cantin.s3.eu-west-3.amazonaws.com/image/railway.png)
 
          
