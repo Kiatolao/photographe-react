@@ -5,7 +5,6 @@ import useFetch from '../components/useFetch';
 export default function Accueil() {
 
   const { fetchData, isLoading } = useFetch('https://directus-production-36e3.up.railway.app/items/background');
-  console.log(fetchData);
 
   return (
     <>
