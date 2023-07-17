@@ -7,8 +7,8 @@ import Masonry from 'react-masonry-css';
 
 export default function Portfolio() {
   const [selectedFilter, setSelectedFilter] = useState(''); 
-  const { fetchData: buttonData, isLoading } = useFetch('http://localhost:8055/items/bouton');
-  const { fetchData: galleryData } = useFetch('http://localhost:8055/items/gallerie');
+  const { fetchData: buttonData, isLoading } = useFetch('https://directus-production-36e3.up.railway.app/items/bouton');
+  const { fetchData: galleryData } = useFetch('https://directus-production-36e3.up.railway.app/items/portfolio');
 
   return (
     <>
@@ -62,7 +62,7 @@ export default function Portfolio() {
       .map((gallery) => (
         <div key={gallery.id} className="my-masonry-grid_item">
           <Image
-            src={`http://localhost:8055/assets/${gallery.image}`}
+            src={`https://directus-production-36e3.up.railway.app/assets/${gallery.image}`}
             alt={gallery.title}
             fluid
             className={`image-container ${gallery.tag}`}

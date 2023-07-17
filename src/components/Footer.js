@@ -3,26 +3,26 @@ import '../index.css';
 import useFetch from './useFetch';
 
 export default function footer() {
-  const { fetchData, isLoading } = useFetch('http://localhost:8055/items/footer');
+  const { fetchData, isLoading } = useFetch('https://directus-production-36e3.up.railway.app/items/piedpage');
 
   return (
   <>
   {isLoading ? (
     <p></p>
   ) : (
-    fetchData.map((footer) => (
-    <footer className="footer mt-auto py-3" key={footer.id}>
+    fetchData &&  (
+    <footer className="footer mt-auto py-3" key={fetchData.id}>
       <div className="container">
       <hr></hr>
-        <span className="text-footer">{footer.adresse} <br></br>
-        {footer.numero} <br></br>
+        <span className="text-footer">{fetchData.adresse} <br></br>
+        {fetchData.numero} <br></br>
         </span>
-        <span className="text-footer">{footer.trademark} </span>
-        <span className="text-footer">- Charles Cantin®</span>
+        <span className="text-footer">© Kiato -</span>
+        <span className="text-footer">{fetchData.trademark} </span>
       </div>
     </footer>
     ))
-  )}
+  }
   
   </>
 

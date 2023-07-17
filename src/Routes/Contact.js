@@ -4,7 +4,7 @@ import Footer from '../components/Footer.js';
 import useFetch from '../components/useFetch';
 
 export default function Contact() {
-  const { fetchData: detailData, isLoading } = useFetch('http://localhost:8055/items/contact');
+  const { fetchData: detailData, isLoading } = useFetch('https://directus-production-36e3.up.railway.app/items/contact');
 
   return (
     <>

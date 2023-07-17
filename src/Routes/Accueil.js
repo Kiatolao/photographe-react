@@ -4,7 +4,7 @@ import useFetch from '../components/useFetch';
 
 export default function Accueil() {
 
-  const { fetchData, isLoading } = useFetch('https://directus-production-890c.up.railway.app/items/background');
+  const { fetchData, isLoading } = useFetch('https://directus-production-36e3.up.railway.app/items/background');
   console.log(fetchData);
 
   return (
@@ -15,7 +15,7 @@ export default function Accueil() {
         <p>Chargement...</p>
       ) : (
         fetchData && (
-          <img src={`http://localhost:8055/assets/${fetchData.image}`} alt={fetchData.title} className="charles" />
+          <img src={`https://directus-production-36e3.up.railway.app/assets/${fetchData.image}`} alt={fetchData.title} className="charles" />
         )
       )}
 

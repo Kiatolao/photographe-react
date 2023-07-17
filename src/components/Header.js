@@ -8,15 +8,15 @@ import useFetch from '../components/useFetch';
 
 
 export default function Header() {
-    const { fetchData: logoData} = useFetch('http://localhost:8055/items/logo');
-    const { fetchData: socialData} = useFetch('http://localhost:8055/items/social');
+    const { fetchData: logoData} = useFetch('https://directus-production-36e3.up.railway.app/items/logo');
+    const { fetchData: socialData} = useFetch('https://directus-production-36e3.up.railway.app/items/social');
   return (
     <>
     <Navbar collapseOnSelect expand="lg" className="navbar-color">
     <Container className="">
       <Link to="/accueil">
         {logoData &&  (   <img
-          src= {`http://localhost:8055/assets/${logoData.image}`}
+          src= {`https://directus-production-36e3.up.railway.app/assets/${logoData.image}`}
 
           className="d-inline-block align-top charles-logo"
           alt={logoData.title}
@@ -36,7 +36,7 @@ export default function Header() {
         <div className="social-position" key={social.id}>
           <a href={social.url}>
             <img
-              src={`http://localhost:8055/assets/${social.logo}`}
+              src={`https://directus-production-36e3.up.railway.app/assets/${social.image}`}
               className="d-inline-block align-top social-logo"
               alt={social.title}
             />

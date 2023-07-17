@@ -6,7 +6,7 @@ import useFetch from '../components/useFetch';
 
 export default function Tarifs() {
 
-  const { fetchData, isLoading } = useFetch('http://localhost:8055/items/tarif');
+  const { fetchData, isLoading } = useFetch('https://directus-production-36e3.up.railway.app/items/tarif');
 
   return (
     <>
@@ -21,14 +21,14 @@ export default function Tarifs() {
               <Col key={card.id} sm={12} md={6} lg={4}>
                 <Card className="card-style">
                   <Card.Img
-                    src={`http://localhost:8055/assets/${card.image}`}
+                    src={`https://directus-production-36e3.up.railway.app/assets/${card.image}`}
                     alt={card.title}
                     className="card-image"
                   />
                   <Card.Body>
                     <Card.Title>{card.title}</Card.Title>
                     <Card.Text>{card.description}</Card.Text>
-                    <Card.Text className='card-price'>{card.prix}</Card.Text>
+                    <Card.Text className='card-price'>{card.price}</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
