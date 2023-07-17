@@ -17,4 +17,20 @@
 
 ![Railway env](https://charles-cantin.s3.eu-west-3.amazonaws.com/image/railway.png)
 
-         
+        - Ensuite j'ai configuré les variables des l'environnement du dépo dans railway pour le connecter à un serveur AWS que j'ai créé au préalable.
+
+            STORAGE_LOCATIONS=s3
+            STORAGE_S3_DRIVER=s3
+            STORAGE_S3_KEY=A***4
+            STORAGE_S3_SECRET=E***5
+            STORAGE_S3_REGION=eu-west-3
+            STORAGE_S3_BUCKET=c***n
+            STORAGE_S3_ENDPOINT=s3.***com
+    
+    2 - Creation d'un bucket AWS
+        -J'ai créé un bucket public et configuré les "Buckets policies" pour definer les permissions
+
+            "s3:DeleteObject",
+            "s3:GetObject",
+            "s3:PutObject"
+
