@@ -27,9 +27,3 @@
             STORAGE_S3_BUCKET=c***n
             STORAGE_S3_ENDPOINT=s3.***com
     
-    2 - Creation d'un bucket AWS
-        -J'ai créé un bucket public et configuré les "Buckets policies" pour definer les permissions
-
-            "s3:DeleteObject",
-            "s3:GetObject",
-            "s3:PutObject"
