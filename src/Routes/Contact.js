@@ -27,7 +27,11 @@ export default function Contact() {
             </div>
             <hr />
             <div className='form-position'>
-              <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
+              <form name="contact" 
+              method="POST" 
+              data-netlify="true" 
+              data-netlify-recaptcha="true"
+              onSubmit="submit">
                 <p>
                 <input type="hidden" name="form-name" value="contact" />
                   <label>Prénom: <input type="text" name="surname" /></label>
