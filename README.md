@@ -4,7 +4,7 @@
         
         !!!  IMPORTANT !!! 
         Message à la personne qui corrigera mon évaluation.
-        Bonjour! Dans mon compte rendu j'ai précisé avoir changé les bucket policies, ce n'est plus le cas.
+        Bonjour! Dans mon compte rendu j'ai précisé avoir changé les buckets policies, ce n'est plus le cas.
         Je passe désormais uniquement par les accès S3 key/key secret.
         Merci
         !!! IMPORTANT !!!
