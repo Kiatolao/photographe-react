@@ -17,7 +17,7 @@
 
 ![Railway env](https://charles-cantin.s3.eu-west-3.amazonaws.com/image/railway.png)
 
-        - Ensuite j'ai configuré les variables des l'environnement du dépo dans railway pour le connecter à un serveur AWS que j'ai créé au préalable.
+        - Ensuite j'ai configuré les variables de l'environnement du dépo dans Railway pour le connecter à un serveur AWS que j'ai créé au préalable.
 
             STORAGE_LOCATIONS=s3
             STORAGE_S3_DRIVER=s3
@@ -35,6 +35,7 @@
             "s3:PutObject"
 
 << Charte Graphique >>
+
     --Palette de couleur --
 
 ![Railway env](https://charles-cantin.s3.eu-west-3.amazonaws.com/image/palette.png)   
