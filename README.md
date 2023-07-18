@@ -5,7 +5,7 @@
         !!!  IMPORTANT !!! 
         Message à la personne qui corrigera mon évaluation.
         Bonjour! Dans mon compte rendu j'ai précisé avoir ajouté des buckets policies, ce n'est plus le cas.
-        Je passe désormais uniquement par les accès S3 key/key secret.
+        Je passe désormais uniquement par les accès S3 key/key secret d'un utilisateur IAM.
         De plus les permissions pour effacer un fichier sont à nouveau fonctionnelles.
         Merci
         !!! IMPORTANT !!!
