@@ -26,7 +26,7 @@ export default function Contact() {
             </div>
             <hr />
             <div className='form-position'>
-              <form name="contact" method="POST" data-netlify="true">
+              <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
                 <p>
                   <label>Prénom: <input type="text" name="surname" /></label>
                 </p>
