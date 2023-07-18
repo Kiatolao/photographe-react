@@ -4,7 +4,7 @@
         
         !!!  IMPORTANT !!! 
         Message à la personne qui corrigera mon évaluation.
-        Bonjour! Dans mon compte rendu j'ai précisé avoir changé les buckets policies, ce n'est plus le cas.
+        Bonjour! Dans mon compte rendu j'ai précisé avoir ajouté des buckets policies, ce n'est plus le cas.
         Je passe désormais uniquement par les accès S3 key/key secret.
         De plus les permissions pour effacer un fichier sont à nouveau fonctionnelles.
         Merci
