@@ -7,7 +7,9 @@ import Masonry from 'react-masonry-css';
 import Loading from '../components/Loading';
 
 export default function Portfolio() {
+  // Déclaration des variables d'état
   const [selectedFilter, setSelectedFilter] = useState(''); 
+  // Récupération des données de des API
   const { fetchData: buttonData, isLoading } = useFetch('https://directus-production-36e3.up.railway.app/items/bouton');
   const { fetchData: galleryData } = useFetch('https://directus-production-36e3.up.railway.app/items/portfolio');
 
@@ -18,6 +20,7 @@ export default function Portfolio() {
       {isLoading ? (
         <p><Loading /></p>
       ) : (
+        // Boutons de filtre
         <div className="container">
           <div className="d-flex flex-wrap justify-content-center button-style">
             {buttonData.map((button) => (

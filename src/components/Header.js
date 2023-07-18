@@ -8,6 +8,7 @@ import useFetch from '../components/useFetch';
 
 
 export default function Header() {
+  // Recuperation de l'API
     const { fetchData: logoData} = useFetch('https://directus-production-36e3.up.railway.app/items/logo');
     const { fetchData: socialData} = useFetch('https://directus-production-36e3.up.railway.app/items/social');
   return (
@@ -15,6 +16,7 @@ export default function Header() {
     <Navbar collapseOnSelect expand="lg" className="navbar-color">
     <Container className="">
       <Link to="/accueil">
+        {/* Champs personnalisable du logo */}
         {logoData &&  (   <img
           src= {`https://directus-production-36e3.up.railway.app/assets/${logoData.image}`}
 
@@ -32,6 +34,7 @@ export default function Header() {
           <Link to="/contact" className="nav-link">Contact</Link>
         </Nav>
         <div className="social-icons-container">
+          {/* CHamps personnalisables des réseaux */}
         {socialData && socialData.map((social) => (
         <div className="social-position" key={social.id}>
           <a href={social.url}>

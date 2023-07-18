@@ -6,6 +6,7 @@ import Loading from '../components/Loading';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 export default function Contact() {
+  //Récuperation de l'API
   const { fetchData: detailData, isLoading } = useFetch('https://directus-production-36e3.up.railway.app/items/contact');
 
   return (
@@ -15,6 +16,7 @@ export default function Contact() {
       {isLoading ? (
         <p><Loading /></p>
       ) : (
+        //Champs personnalisable de la page contact
         detailData && (
           <div key={detailData.id}>
             <p className='text-contact'>{detailData.description}</p>
@@ -27,6 +29,7 @@ export default function Contact() {
               </p>
             </div>
             <hr />
+            {/* Insertion des attributs netlify pour la detection de Netlify Form */}
             <div className='form-position'>
               <form name="contact" 
               method="POST" 

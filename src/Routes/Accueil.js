@@ -4,7 +4,7 @@ import useFetch from '../components/useFetch';
 import Loading from '../components/Loading';
 
 export default function Accueil() {
-
+  // Récupération de l'API
   const { fetchData, isLoading } = useFetch('https://directus-production-36e3.up.railway.app/items/background');
 
   return (
@@ -14,6 +14,7 @@ export default function Accueil() {
       {isLoading ? (
         <p><Loading /></p>
       ) : (
+        // Champs personnalisable de la page d'accueil
         fetchData && (
           <img src={`https://directus-production-36e3.up.railway.app/assets/${fetchData.image}`} alt={fetchData.title} className="charles" />
         )

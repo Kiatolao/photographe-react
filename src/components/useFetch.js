@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+// Définition de useFetch qui prend une URL en compte
 const useFetch = (url) => {
 const [fetchData, setImageData] = useState(null);
 const [isLoading, setIsLoading] = useState(true);
-
+// Effectue une  action au chargement de la page
 useEffect(() => {
   const fetchData = async () => {
     try {

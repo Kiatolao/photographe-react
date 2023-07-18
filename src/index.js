@@ -8,6 +8,7 @@ import Tarifs from './Routes/Tarifs';
 import Contact from './Routes/Contact';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 
+// Creation du router
 const router = createBrowserRouter([
   {
     path: '/',

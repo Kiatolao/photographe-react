@@ -6,7 +6,7 @@ import useFetch from '../components/useFetch';
 import Loading from '../components/Loading';
 
 export default function Tarifs() {
-
+  //recuperation de l'API
   const { fetchData, isLoading } = useFetch('https://directus-production-36e3.up.railway.app/items/tarif');
 
   return (
@@ -17,6 +17,7 @@ export default function Tarifs() {
         {isLoading ? (
           <p><Loading /></p>
         ) : (
+          // Champs personnalisable de la page d'accueil
           <Row>
             {fetchData.map((card) => (
               <Col key={card.id} sm={12} md={6} lg={4}>

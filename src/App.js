@@ -9,6 +9,7 @@ import Layer from './components/layer.js';
 function App() {
   return (
     <>
+    {/* Redirection vers la page d'accueil */}
       <Navigate from="/" to="/accueil" />
       <Layer />
       <Header />
