@@ -4,8 +4,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1E1E1E !important;
+  background-image: linear-gradient(
+    180deg,
+    hsl(0deg 0% 12%) 0%,
+    hsl(205deg 3% 14%) 28%,
+    hsl(204deg 5% 16%) 41%,
+    hsl(204deg 7% 18%) 51%,
+    hsl(204deg 9% 21%) 61%,
+    hsl(204deg 10% 23%) 69%,
+    hsl(204deg 11% 25%) 78%,
+    hsl(204deg 12% 28%) 85%,
+    hsl(204deg 13% 30%) 93%,
+    hsl(203deg 14% 32%) 100%
+  );
   height: 100vh;
+  background-attachment: fixed;
 }
 
 code {
@@ -345,7 +358,7 @@ textarea {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #1E1E1E;
+
   text-align: center;
   padding: 20px;
 }
