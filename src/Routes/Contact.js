@@ -3,6 +3,7 @@ import '../index.css';
 import Footer from '../components/Footer.js';
 import useFetch from '../components/useFetch';
 import Loading from '../components/Loading';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export default function Contact() {
   const { fetchData: detailData, isLoading } = useFetch('https://directus-production-36e3.up.railway.app/items/contact');
@@ -49,9 +50,9 @@ export default function Contact() {
                   <label>Message: <textarea name="message"></textarea></label>
                 </p>
                 <p>
+                <ReCAPTCHA sitekey="6Lc6ZqQaAAAAAIZZ0Z3Z2Z3Z2Z3Z2Z3Z2Z3Z2Z3Z" />
                   <button type="submit" className='button-87'>Envoyer</button>
                 </p>
-                <div className="g-recaptcha" data-sitekey="y6Ld-1DQnAAAAAPyh__eCp_JwweTMOdHITNEI-j5V" data-netlify-recaptcha="true"></div>
               </form>
             </div>
           </div>
