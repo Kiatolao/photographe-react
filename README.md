@@ -1,7 +1,15 @@
 -- Mise en place du site en ligne --
 
 << Procédure de déploiement  sur Netlify >>
+        
+        !!!  IMPORTANT !!! 
+        Message à la personne qui corrigera mon évaluation.
+        Bonjour! Dans mon compte rendu j'ai précisé avoir changé les bucket policies, ce n'est plus le cas.
+        Je passe désormais uniquement par les accès S3 key/key secret.
+        Merci
+        !!! IMPORTANT !!!
 
+    
     --Frontend--
     1 - Creation d'un compte sur la plateforme
     2 - Appairage du compte Github
@@ -16,6 +24,7 @@
             https://github.com/Kiatolao/cms-directus
 
 ![Railway env](https://charles-cantin.s3.eu-west-3.amazonaws.com/image/railway.png)
+
 
         - Ensuite j'ai configuré les variables de l'environnement du dépo dans Railway pour le connecter à un serveur AWS que j'ai créé au préalable.
 
