@@ -45,6 +45,7 @@ export default function Contact() {
                   <label>Message: <textarea name="message"></textarea></label>
                 </p>
                 <p>
+                <div data-netlify-recaptcha="true"></div>
                   <button type="submit" className='button-87'>Envoyer</button>
                 </p>
               </form>
