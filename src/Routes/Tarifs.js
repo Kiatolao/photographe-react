@@ -3,6 +3,7 @@ import Footer from '../components/Footer.js';
 import { Card, Row, Col } from 'react-bootstrap';
 import '../index.css';
 import useFetch from '../components/useFetch';
+import Loading from '../components/Loading';
 
 export default function Tarifs() {
 
@@ -14,7 +15,7 @@ export default function Tarifs() {
       <hr />
       <div className="container">
         {isLoading ? (
-          <p>Chargement...</p>
+          <p><Loading /></p>
         ) : (
           <Row>
             {fetchData.map((card) => (

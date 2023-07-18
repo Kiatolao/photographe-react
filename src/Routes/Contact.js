@@ -2,6 +2,7 @@ import React from 'react';
 import '../index.css';
 import Footer from '../components/Footer.js';
 import useFetch from '../components/useFetch';
+import Loading from '../components/Loading';
 
 export default function Contact() {
   const { fetchData: detailData, isLoading } = useFetch('https://directus-production-36e3.up.railway.app/items/contact');
@@ -11,7 +12,7 @@ export default function Contact() {
       <h1 className='title-page'>CONTACT</h1>
       <hr />
       {isLoading ? (
-        <p>Chargement...</p>
+        <p><Loading /></p>
       ) : (
         detailData && (
           <div key={detailData.id}>

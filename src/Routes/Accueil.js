@@ -1,6 +1,7 @@
 import React from "react";
 import '../index.css';
 import useFetch from '../components/useFetch';
+import Loading from '../components/Loading';
 
 export default function Accueil() {
 
@@ -11,7 +12,7 @@ export default function Accueil() {
       <div className="fullscreen-bg">
 
       {isLoading ? (
-        <p>Chargement...</p>
+        <p><Loading /></p>
       ) : (
         fetchData && (
           <img src={`https://directus-production-36e3.up.railway.app/assets/${fetchData.image}`} alt={fetchData.title} className="charles" />

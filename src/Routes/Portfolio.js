@@ -4,6 +4,7 @@ import '../index.css';
 import Footer from '../components/Footer.js'
 import useFetch from '../components/useFetch';
 import Masonry from 'react-masonry-css';
+import Loading from '../components/Loading';
 
 export default function Portfolio() {
   const [selectedFilter, setSelectedFilter] = useState(''); 
@@ -15,7 +16,7 @@ export default function Portfolio() {
       <h1 className='title-page'>PORTFOLIO</h1>
       <hr />
       {isLoading ? (
-        <p>Loading...</p>
+        <p><Loading /></p>
       ) : (
         <div className="container">
           <div className="d-flex flex-wrap justify-content-center button-style">
