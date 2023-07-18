@@ -50,7 +50,7 @@ export default function Contact() {
                   <label>Message: <textarea name="message"></textarea></label>
                 </p>
                 <p>
-                <ReCAPTCHA sitekey="6Lc6ZqQaAAAAAIZZ0Z3Z2Z3Z2Z3Z2Z3Z2Z3Z2Z3Z" />
+                <ReCAPTCHA sitekey="6Ld-1DQnAAAAAPyh__eCp_JwweTMOdHITNEI-j5V"  className='captcha'/>
                   <button type="submit" className='button-87'>Envoyer</button>
                 </p>
               </form>
