@@ -4,7 +4,6 @@ import Footer from '../components/Footer.js';
 import useFetch from '../components/useFetch';
 import Loading from '../components/Loading';
 import ReCAPTCHA from 'react-google-recaptcha';
-import ScrollToTopButton from '../components/Scroll.js';
 
 export default function Contact() {
   //Récuperation de l'API
@@ -13,7 +12,6 @@ export default function Contact() {
   return (
     <>
     <div style={{marginTop:"85px"}}>
-      <ScrollToTopButton />
       <h1 className='title-page'>CONTACT</h1>
       <hr />
       {isLoading ? (

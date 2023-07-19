@@ -5,7 +5,6 @@ import Footer from '../components/Footer.js'
 import useFetch from '../components/useFetch';
 import Masonry from 'react-masonry-css';
 import Loading from '../components/Loading';
-import ScrollToTopButton from '../components/Scroll.js';
 
 export default function Portfolio() {
 
@@ -18,7 +17,6 @@ export default function Portfolio() {
   return (
     <>
     <div style={{marginTop:"85px"}}>
-    <ScrollToTopButton />
       <h1 className='title-page'>PORTFOLIO</h1>
       <hr />
       {isLoading ? (
