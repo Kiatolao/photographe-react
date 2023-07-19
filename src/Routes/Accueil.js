@@ -9,10 +9,11 @@ export default function Accueil() {
 
   return (
     <>
-      <div className="fullscreen-bg">
+      <div className="fullscreen-bg"
+       >
 
       {isLoading ? (
-        <p><Loading /></p>
+      <Loading />
       ) : (
         // Champs personnalisable de la page d'accueil
         fetchData && (

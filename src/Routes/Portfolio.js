@@ -17,11 +17,12 @@ export default function Portfolio() {
   
   return (
     <>
-      <ScrollToTopButton />
+    <div style={{marginTop:"85px"}}>
+    <ScrollToTopButton />
       <h1 className='title-page'>PORTFOLIO</h1>
       <hr />
       {isLoading ? (
-        <p><Loading /></p>
+        <Loading />
       ) : (
         // Boutons de filtre
         <div className="container">
@@ -77,6 +78,8 @@ export default function Portfolio() {
         </div>
       ))}
 </Masonry>
+    </div>
+
 
       <Footer />
     </>

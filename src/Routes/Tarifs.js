@@ -12,12 +12,13 @@ export default function Tarifs() {
 
   return (
     <>
+    <div style={{marginTop:"85px"}}>
       <ScrollToTopButton />
       <h1 className="title-page">TARIFS ET PRESTATIONS</h1>
       <hr />
       <div className="container">
         {isLoading ? (
-          <p><Loading /></p>
+          <Loading />
         ) : (
           // Champs personnalisable de la page d'accueil
           <Row>
@@ -40,7 +41,7 @@ export default function Tarifs() {
           </Row>
         )}
       </div>
-
+      </div>
       <Footer />
     </>
   );

@@ -12,11 +12,12 @@ export default function Contact() {
 
   return (
     <>
+    <div style={{marginTop:"85px"}}>
       <ScrollToTopButton />
       <h1 className='title-page'>CONTACT</h1>
       <hr />
       {isLoading ? (
-        <p><Loading /></p>
+        <Loading />
       ) : (
         //Champs personnalisable de la page contact
         detailData && (
@@ -63,6 +64,7 @@ export default function Contact() {
           </div>
         )
       )}
+      </div>
       <Footer />
     </>
   );
