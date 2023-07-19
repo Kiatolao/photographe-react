@@ -5,6 +5,7 @@ import Footer from '../components/Footer.js'
 import useFetch from '../components/useFetch';
 import Masonry from 'react-masonry-css';
 import Loading from '../components/Loading';
+import Scroll from '../components/Scroll';
 
 export default function Portfolio() {
 
@@ -16,6 +17,7 @@ export default function Portfolio() {
   
   return (
     <>
+    <Scroll showBelow={100} />
     <div style={{marginTop:"85px"}}>
       <h1 className='title-page'>PORTFOLIO</h1>
       <hr />

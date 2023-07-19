@@ -36,7 +36,7 @@ export default function Contact() {
               method="POST" 
               data-netlify="true" 
               data-netlify-recaptcha="true"
-              onSubmit="submit">
+              >
                 <p>
                 <input type="hidden" name="form-name" value="contact" />
                   <label>Prénom: <input type="text" name="surname" /></label>
