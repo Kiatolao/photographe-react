@@ -5,16 +5,19 @@ import Footer from '../components/Footer.js'
 import useFetch from '../components/useFetch';
 import Masonry from 'react-masonry-css';
 import Loading from '../components/Loading';
+import ScrollToTopButton from '../components/Scroll.js';
 
 export default function Portfolio() {
+
   // Déclaration des variables d'état
   const [selectedFilter, setSelectedFilter] = useState(''); 
   // Récupération des données de des API
   const { fetchData: buttonData, isLoading } = useFetch('https://directus-production-36e3.up.railway.app/items/bouton');
   const { fetchData: galleryData } = useFetch('https://directus-production-36e3.up.railway.app/items/portfolio');
-
+  
   return (
     <>
+      <ScrollToTopButton />
       <h1 className='title-page'>PORTFOLIO</h1>
       <hr />
       {isLoading ? (
