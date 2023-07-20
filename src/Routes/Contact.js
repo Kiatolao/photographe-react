@@ -4,6 +4,7 @@ import Footer from '../components/Footer.js';
 import useFetch from '../components/useFetch';
 import Loading from '../components/Loading';
 import ReCAPTCHA from 'react-google-recaptcha';
+import Scroll from '../components/Scroll';
 
 export default function Contact() {
   //Récuperation de l'API
@@ -11,7 +12,8 @@ export default function Contact() {
 
   return (
     <>
-    <div style={{marginTop:"85px"}}>
+    <Scroll showBelow={100} />
+    <div style={{marginTop:"95px"}}>
       <h1 className='title-page'>CONTACT</h1>
       <hr />
       {isLoading ? (

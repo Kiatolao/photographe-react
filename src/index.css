@@ -4,19 +4,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(
-    180deg,
-    hsl(0deg 0% 12%) 0%,
-    hsl(205deg 3% 14%) 28%,
-    hsl(204deg 5% 16%) 41%,
-    hsl(204deg 7% 18%) 51%,
-    hsl(204deg 9% 21%) 61%,
-    hsl(204deg 10% 23%) 69%,
-    hsl(204deg 11% 25%) 78%,
-    hsl(204deg 12% 28%) 85%,
-    hsl(204deg 13% 30%) 93%,
-    hsl(203deg 14% 32%) 100%
-  );
+  background: rgb(30,30,30);
+  background: linear-gradient(180deg, rgba(30,30,30,1) 3%, rgba(33,34,35,1) 19%, rgba(35,38,39,1) 34%, rgba(46,52,55,1) 54%, rgba(52,60,64,1) 67%, rgba(55,64,69,1) 81%, rgba(71,85,94,1) 93%);
   height: 100vh;
   background-attachment: fixed;
 }

@@ -18,7 +18,7 @@ export default function Portfolio() {
   return (
     <>
     <Scroll showBelow={100} />
-    <div style={{marginTop:"85px"}}>
+    <div style={{marginTop:"95px"}}>
       <h1 className='title-page'>PORTFOLIO</h1>
       <hr />
       {isLoading ? (

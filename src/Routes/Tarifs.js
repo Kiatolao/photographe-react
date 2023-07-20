@@ -4,6 +4,7 @@ import { Card, Row, Col } from 'react-bootstrap';
 import '../index.css';
 import useFetch from '../components/useFetch';
 import Loading from '../components/Loading';
+import Scroll from '../components/Scroll';
 
 export default function Tarifs() {
   //recuperation de l'API
@@ -11,7 +12,8 @@ export default function Tarifs() {
 
   return (
     <>
-    <div style={{marginTop:"85px"}}>
+    <Scroll showBelow={100} />
+    <div style={{marginTop:"95px"}}>
       <h1 className="title-page">TARIFS ET PRESTATIONS</h1>
       <hr />
       <div className="container">
