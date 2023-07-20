@@ -10,6 +10,11 @@ body {
   background-attachment: fixed;
 }
 
+.home-style {
+  position: absolute!important;
+  bottom: 0!important;
+}
+
 #btn-back-to-top {
   position: fixed;
   bottom: 20px;
