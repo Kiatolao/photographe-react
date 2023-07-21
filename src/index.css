@@ -1,6 +1,4 @@
-html {
-  min-height:100%;
-}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -9,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: rgb(30,30,30);
   background: linear-gradient(180deg, rgba(30,30,30,1) 3%, rgba(33,34,35,1) 19%, rgba(35,38,39,1) 34%, rgba(46,52,55,1) 54%, rgba(52,60,64,1) 67%, rgba(55,64,69,1) 81%, rgba(71,85,94,1) 93%);
-  height: 100%;
+
   background-attachment: fixed;
 }
 
